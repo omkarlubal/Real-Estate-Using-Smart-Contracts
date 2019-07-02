@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Real Estate App</title>
+    <link rel="stylesheet" href="main.css">
+    <link id="fontawesome" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="w3-card-4">
+        <div class="brand"><span class="fa fa-bar-chart"></span> BlockProp</div>
+        <div class="items">
+            <a href="/">Home</a>
+            <a href="sell">Sell Property</a>
+            <a href="about">About</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="cover">
+            <div class="overlay w3-display-container">
+                <div class="w3-display-middle" style="width:500px;color:#fff;margin-top:30px;">
+                    <i style="display:block;margin-bottom:10px;"><span>Search and buy your dream house in 2 clicks. Buy / Sell property on <b>BlockProp</b></span></i>
+                    <div class="searchbar-container w3-card-4">
+                        <input type="search" placeholder="Search by location/owner name...">
+                        <button class="search-button"><span class="fa fa-search"></span></button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:70px;"><h2><b style="border-bottom:3px solid #0099ff55">Top Bids</b></h2></div>
+        <div class="property-container">
+            <div class="w3-row">
+                <div class="w3-third">
+                    <div class="w3-card-4 property">
+                        <table>
+                            <tr><td><span class="fa fa-user"></span>&nbsp; Owner</td><td>Venkatesh Kamath</td></tr>
+                            <tr><td><span class="fa fa-money"></span> Top Price</td><td>10ETH</td></tr>
+                            <tr><td><span class="fa fa-map-marker"></span>&nbsp;&nbsp;Location</td><td>Vartak Nagar, Thane - 400606</td></tr>
+                        </table>
+                        <div class="w3-opacity-min" style="text-align:center;font-size:15pt;padding-top:40px;font-weight:bold;">
+                            13h 12m 23s Remaining
+                        </div>
+                        <div style="text-align:center;padding-top:20px;">
+                            <button class="w3-btn" style="background-color:#09f;color:#fff;">Place Bid</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <div class="container" style="background-color:#ddd;">
+        <div style="text-align:center;margin-top:70px;"><h2><b style="border-bottom:3px solid #0099ff55">Properties for sell</b></h2></div>
+        <div class="property-container">
+            <div class="w3-row">
+                <div class="w3-third">
+                    <div class="w3-card-4 property">
+                        <table>
+                            <tr><td><span class="fa fa-user"></span>&nbsp; Owner</td><td>Venkatesh Kamath</td></tr>
+                            <tr><td><span class="fa fa-money"></span> Price</td><td>10ETH</td></tr>
+                            <tr><td><span class="fa fa-map-marker"></span>&nbsp;&nbsp;Location</td><td>Vartak Nagar, Thane - 400606</td></tr>
+                        </table>
+                        <div style="text-align:center;padding-top:20px;">
+                            <button class="w3-btn" style="background-color:#09f;color:#fff;">Buy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Made with <span class="fa fa-heart"></span> by Team Taki Taki at 03:00AM 23<sup>th</sup> June, 2019
+    </footer>
+</body>
+</html>

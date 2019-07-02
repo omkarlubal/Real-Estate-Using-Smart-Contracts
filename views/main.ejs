@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+</head>
+<body>
+    <nav class="w3-card-4">
+        <div class="brand"><span class="fa fa-bar-chart"></span> BlockProp</div>
+        <div class="items">
+            <a href="/">Home</a>
+            <a href="sell">Sell Property</a>
+            <a href="about">About</a>
+            <a href="logout">Logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="cover">
+            <div class="overlay w3-display-container">
+                <div class="w3-display-middle" style="width:500px;color:#fff;margin-top:30px;">
+                    <i style="display:block;margin-bottom:10px;"><span>Search and buy your dream house in 2 clicks. Buy / Sell property on <b>BlockProp</b></span></i>
+                    <div class="searchbar-container w3-card-4">
+                        <input type="search" placeholder="Search by location/owner name...">
+                        <button class="search-button"><span class="fa fa-search"></span></button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:70px;"><h2><b style="border-bottom:3px solid #0099ff55">Top Bids</b></h2></div>
+        <div class="property-container">
+            <div class="w3-row">
+                <div class="w3-third">
+                    <div class="w3-card-4 property">
+                        <table>
+                            <tr><td><span class="fa fa-user"></span>&nbsp; Owner</td><td>John Doe</td></tr>
+                            <tr><td><span class="fa fa-money"></span> Top Price</td><td>10ETH</td></tr>
+                            <tr><td><span class="fa fa-map-marker"></span>&nbsp;&nbsp;Location</td><td>604/A Thane, Maharashtra...</td></tr>
+                        </table>
+                        <div class="w3-opacity-min" style="text-align:center;font-size:15pt;padding-top:40px;font-weight:bold;">
+                            13h 12m 23s Remaining
+                        </div>
+                        <div style="text-align:center;padding-top:20px;">
+                            <button class="w3-btn" style="background-color:#09f;color:#fff;">Place Bid</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-third">
+                    <div class="w3-card-4 property">
+                        <table>
+                            <tr><td><span class="fa fa-user"></span>&nbsp; Owner</td><td>Peter Parker</td></tr>
+                            <tr><td><span class="fa fa-money"></span> Top Price</td><td>8ETH</td></tr>
+                            <tr><td><span class="fa fa-map-marker"></span>&nbsp;&nbsp;Location</td><td>Ghatkopar, Mumba...</td></tr>
+                        </table>
+                        <div class="w3-opacity-min" style="text-align:center;font-size:15pt;padding-top:40px;font-weight:bold;">
+                            04h 02m 32s Remaining
+                        </div>
+                        <div style="text-align:center;padding-top:20px;">
+                            <button class="w3-btn" style="background-color:#09f;color:#fff;">Place Bid</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-third">
+                    <div class="w3-card-4 property">
+                        <table>
+                            <tr><td><span class="fa fa-user"></span>&nbsp; Owner</td><td>Clark Kent</td></tr>
+                            <tr><td><span class="fa fa-money"></span> Top Price</td><td>11ETH</td></tr>
+                            <tr><td><span class="fa fa-map-marker"></span>&nbsp;&nbsp;Location</td><td>Hyderbad, Andhra Pradesh</td></tr>
+                        </table>
+                        <div class="w3-opacity-min" style="text-align:center;font-size:15pt;padding-top:40px;font-weight:bold;">
+                            02h 10m 43s Remaining
+                        </div>
+                        <div style="text-align:center;padding-top:20px;">
+                            <button class="w3-btn" style="background-color:#09f;color:#fff;">Place Bid</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <div class="container" style="background-color:#ddd;">
+        <div style="text-align:center;margin-top:70px;"><h2><b style="border-bottom:3px solid #0099ff55">Properties for sale</b></h2></div>
+        <div class="property-container">
+            <% include partials/components/forsale.ejs %>
+        </div>
+    </div>
+    
+    <div class="row" style="display:none;">
+        <div class="col-10 offset-1" style="background-color:bisque; height:200px;">
+            <% include partials/components/status.ejs %>
+        </div>
+    </div>
+
+
+</div>
+    <footer>
+        Made with <span class="fa fa-heart"></span> by Team Taki Taki at 03:00AM 23<sup>th</sup> June, 2019
+    </footer>
+
+    <!-- MAIN SCREEN AFTER METAMASK INFO LOADED -->
+    
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBnRa851427DkwOI12Uh5JuRmMy0bCcCs8",
+        authDomain: "realestate-blockprop.firebaseapp.com",
+        databaseURL: "https://realestate-blockprop.firebaseio.com",
+        projectId: "realestate-blockprop",
+        storageBucket: "",
+        messagingSenderId: "334631496382",
+        appId: "1:334631496382:web:7c8d55ee1f9a9dec"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+ 
+    <% include partials/jsincludes.ejs %>
+    <script src="/js/arrive.min.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/forsale.js"></script>
+    <script src="/js/operations.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include partials/head.ejs %>
+
+</head>
+<body>
+    <nav class="w3-card-4">
+        <div class="brand"><span class="fa fa-bar-chart"></span> BlockProp</div>
+        <div class="items">
+            <a href="/">Home</a>
+            <a href="sell">Sell Property</a>
+            <a href="about">About</a>
+            <a href="logout">Logout</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="cover" style="background:url('../images/cover2.jpg');">
+            <div class="overlay w3-display-container" style="background:linear-gradient(to bottom right,#0099ff55,#000000)">
+                <div class="w3-display-middle" style="color:#fff;margin-top:30px;text-align:center;width:100%;">
+                    <i style="display:block;margin-bottom:10px;font-size:20pt;"><span>Sell your property securely without any need of paperworks</span></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="background-color:#eee;">
+        <div style="text-align:center;margin-top:70px;"><h2><b style="border-bottom:3px solid #0099ff55">Your Properties</b></h2></div>
+        <div class="property-container">
+            <% include partials/components/landlist.ejs %>
+        </div>
+    </div>
+    <div class="row" style="display:none;">
+        <div class="col-10 offset-1" style="background-color:bisque; height:200px;">
+            <% include partials/components/status.ejs %>
+        </div>
+    </div>
+    <footer>
+        Made with <span class="fa fa-heart"></span> by Team Taki Taki at 03:00AM 23<sup>rd</sup> June, 2019
+    </footer>
+    
+    <% include partials/jsincludes.ejs %>
+ 
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyBnRa851427DkwOI12Uh5JuRmMy0bCcCs8",
+        authDomain: "realestate-blockprop.firebaseapp.com",
+        databaseURL: "https://realestate-blockprop.firebaseio.com",
+        projectId: "realestate-blockprop",
+        storageBucket: "",
+        messagingSenderId: "334631496382",
+        appId: "1:334631496382:web:7c8d55ee1f9a9dec"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <script src="/js/arrive.min.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/loadLands.js"></script>
+    <script src="/js/operations.js"></script>
+</body>
+</html>
